@@ -10,17 +10,33 @@ export default function Home () {
     <div
       class={tw`p-4 mx-auto max-w-screen-md text-medium bg-primary rounded rounded-xl p-10 text-white`}
     >
+      <p class={tw`pv-10`}>Trying out Deno Fresh web-framework</p>
       <img
         src='/logo.svg'
         height='100px'
         alt='the fresh logo: a sliced lemon dripping with juice'
       />
-      <p class={tw`my-6`}>
-        Welcome to `fresh`. Try update this message in the ./routes/index.tsx
-        file, and refresh.
-      </p>
+      <p class={tw`my-6`}>Welcome to `fresh`</p>
       <Counter start={3} />
       <CounterServer start={1} />
+      <ul class={tw`text-small`}>
+        <li>
+          You can see the source code here:{' '}
+          <a
+            class={tw`text-black`}
+            href='https://github.com/netsi1964/netsi-fresh'
+            target='_blank'
+          >
+            https://github.com/netsi1964/netsi-fresh
+          </a>
+        </li>
+        <li>
+          Read more about fresh:{' '}
+          <a class={tw`text-black`} href='https://fresh.deno.dev/'>
+            https://fresh.deno.dev/
+          </a>
+        </li>
+      </ul>
     </div>
   )
 }
@@ -31,7 +47,7 @@ interface CounterProps {
 
 export function CounterServer (props: CounterProps) {
   const [count, setCount] = useState(props.start)
-  const btn = tw`px-2 py-1 border(gray-100 1) hover:bg-gray-200`
+  const btn = tw`px-2 py-1 border(gray-100 1) hover:bg-secondary rounded m-2`
   return (
     <div class={tw`flex gap-2 w-full`}>
       <p class={tw`flex-grow-1 font-bold text-xl`}>{count}</p>

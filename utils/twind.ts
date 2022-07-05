@@ -18,6 +18,12 @@ export const config: Configuration = {
       tertiary: "#ff4081",
       quaternary: "#ff4081",
       white: "#fff",
+      black: "#000",
+    },
+    spacing: {
+      2: ".5rem",
+      4: "1rem",
+      10: "2rem",
     },
   },
 };
